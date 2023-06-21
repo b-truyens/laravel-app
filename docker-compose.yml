@@ -22,7 +22,7 @@ services:
             - mysql
             - postgres
         networks:
-            - ${APP_NAME}_network
+            - App_network
 
     # Database Servers
 
@@ -37,9 +37,9 @@ services:
             - MYSQL_PASSWORD=${DB_PASSWORD}
             - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
         volumes:
-            - ${APP_NAME}_mysql-data:/var/lib/mysql
+            - App_mysql-data:/var/lib/mysql
         networks:
-            - ${APP_NAME}_network
+            - App_network
 
     postgres:
         container_name: ${APP_NAME}_postgres
@@ -49,10 +49,9 @@ services:
             - POSTGRES_PASSWORD=${DB_PASSWORD}
             - POSTGRES_DB=${DB_DATABASE}
         volumes:
-            - ${APP_NAME}_pg-data:/var/lib/postgresql/data/
+            - App_pg-data:/var/lib/postgresql/data/
         networks:
-            - ${APP_NAME}_network
-
+            - App_network
 
     phpmyadmin:
         container_name: ${APP_NAME}_phpmyadmin
@@ -65,12 +64,12 @@ services:
         depends_on:
             - mysql
         networks:
-            - ${APP_NAME}_network
+            - App_network
 
 networks:
-    ${APP_NAME}_network:
+    App_network:
         driver: bridge
 
 volumes:
-    ${APP_NAME}_mysql-data: ~
-    ${APP_NAME}_pg-data:
+    App_mysql-data: ~
+    App_pg-data:
