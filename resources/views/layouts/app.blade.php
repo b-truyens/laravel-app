@@ -33,12 +33,15 @@
             @endif
 
             <!-- Page Content -->
-            <main  class="bg-gray-200  shadow">
+            <main  class="bg-gray-200 shadow antialiased">
                 {{ $slot }}
             </main>
         </div>
+        @livewire('notifications')
 
         @stack('modals')
+
+        @stack('scripts')
 
         @livewireScripts
     </body>

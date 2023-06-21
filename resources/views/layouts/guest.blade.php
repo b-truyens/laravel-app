@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="dark" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html class="" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,10 +13,21 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+        @livewireStyles
+
     </head>
     <body>
-        <div class="font-sans text-black antialiased dark:bg-slate-800">
+        <div class="font-sans text-black antialiased bg-slate-800">
             {{ $slot }}
         </div>
+
+        @livewire('notifications')
+
+        @stack('modals')
+
+        @stack('scripts')
+
+        @livewireScripts
     </body>
 </html>
