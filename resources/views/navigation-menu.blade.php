@@ -179,10 +179,6 @@
                 </div>
             </div>
 
-            @livewire('filament.core.notifications')
-
-            <x-filament::layouts.app.topbar.user-menu />
-
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
