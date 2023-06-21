@@ -1,0 +1,76 @@
+version: "3.8"
+services:
+
+    # PHP & NGINX / Node.js App Service
+
+    php:
+        container_name: ${APP_NAME}_php
+        build:
+            context: .
+            target: php
+            args:
+                - APP_ENV=${APP_ENV}
+        environment:
+            - APP_ENV=${APP_ENV}
+            - CONTAINER_ROLE=app
+        working_dir: /var/www
+        volumes:
+            - ./:/var/www
+        ports:
+            - 8700:8000
+        depends_on:
+            - mysql
+            - postgres
+        networks:
+            - laravel
+
+    # Database Servers
+
+    mysql:
+        container_name: mysql
+        image: mysql:8.0
+        ports:
+            - 8706:3306
+        environment:
+            - MYSQL_DATABASE=${DB_DATABASE}
+            - MYSQL_USER=${DB_USERNAME}
+            - MYSQL_PASSWORD=${DB_PASSWORD}
+            - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+        volumes:
+            - mysql-data:/var/lib/mysql
+        networks:
+            - laravel
+
+    postgres:
+        container_name: ${APP_NAME}_postgres
+        image: postgres:13-alpine
+        environment:
+            - POSTGRES_USER=${DB_USERNAME}
+            - POSTGRES_PASSWORD=${DB_PASSWORD}
+            - POSTGRES_DB=${DB_DATABASE}
+        volumes:
+            - pg-data:/var/lib/postgresql/data/
+        networks:
+            - laravel
+
+
+    phpmyadmin:
+        container_name: ${APP_NAME}_phpmyadmin
+        image: phpmyadmin
+        ports:
+            - 8701:80
+        environment:
+            - PMA_ARBITRARY=1
+            - PMA_HOST=mysql
+        depends_on:
+            - mysql
+        networks:
+            - laravel
+
+networks:
+    laravel:
+        driver: bridge
+
+volumes:
+    mysql-data: ~
+    pg-data:
