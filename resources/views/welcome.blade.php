@@ -24,9 +24,11 @@
         <div class="min-h-screen dark:bg-gray-700 bg-gray-200">
 
 
-        <x-compact-nav />
+<div class="">   
+    <x-compact-nav />
 
-        <x-filament::topbar />
+    <x-filament::topbar />
+</div>
 
         <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-blue-500 selection:text-white">
 
@@ -113,8 +115,11 @@
                         </div>
                     </div>
                 </div>
+
                 <span class="">
+
                 <x-footer />
+
                 </span>
             </div>
         </div>
@@ -122,6 +127,7 @@
         </div>
 
         @livewire('notifications')
+        @livewire('filament.core.notifications')
 
         @stack('modals')
 
