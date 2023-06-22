@@ -42,11 +42,13 @@
 
         <div class="min-h-screen dark:bg-gray-700 bg-gray-200">
 
+<div class="">
+
             <x-compact-nav />
 
             <x-filament::topbar />
 
-
+</div>
             <!-- Page Heading -->
             @if (isset($header))
                 <header class="bg-slate-300 dark:bg-slate-600  bg-opacity-25 shadow-x2">
