@@ -40,7 +40,7 @@
     <body class="font-sans antialiased bg-slate-200 ">
         <x-banner />
 
-        <div class="min-h-screen bg-gray-200">
+        <div class="min-h-screen dark:bg-gray-700 bg-gray-200">
 
             <x-compact-nav />
 

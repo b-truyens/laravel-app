@@ -10,6 +10,14 @@
             <div class="bg-gray-100 dark:bg-gray-300  text-gray-900 dark:text-white overflow-hidden shadow-xl sm:rounded-lg">
                 <x-welcome />
             </div>
+            <br><br>
+            <div class="bg-gray-100 dark:bg-gray-300  text-gray-900 dark:text-white overflow-hidden shadow-xl sm:rounded-lg">
+                <x-welcome />
+            </div>
+            <br><br>
+            <div class="bg-gray-100 dark:bg-gray-300  text-gray-900 dark:text-white overflow-hidden shadow-xl sm:rounded-lg">
+                <x-welcome />
+            </div>
         </div>
 
     </div>

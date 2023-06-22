@@ -21,6 +21,9 @@
     </head>
     <body class="antialiased">
 
+        <div class="min-h-screen dark:bg-gray-700 bg-gray-200">
+
+
         <x-compact-nav />
 
         <x-filament::topbar />
@@ -114,6 +117,8 @@
                 <x-footer />
                 </span>
             </div>
+        </div>
+
         </div>
 
         @livewire('notifications')

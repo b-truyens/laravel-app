@@ -1,11 +1,11 @@
 @if (Route::has('login'))
-    <div>
+    <div class="flex shrink-0 h-16 sticky top-0 w-full">
         @auth
             <!-- If the user is logged in -->
 
 
             <nav x-data="{ open: false }"
-                class="bg-white border-b border-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white">
+                class="flex w-full z-0 bg-white border-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
