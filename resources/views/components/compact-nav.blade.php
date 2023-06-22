@@ -1,5 +1,5 @@
 @if (Route::has('login'))
-    <div class="flex shrink-0 h-16 sticky top-0 w-full">
+    <div class="flex shrink-0 h-16 sticky top-0 w-full z-20">
         @auth
             <!-- If the user is logged in -->
 
@@ -13,7 +13,7 @@
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <a href="{{ route('dashboard') }}">
-                                    <x-application-db321715c79117a7462e0bd8f8117555eafd2319mark class="block h-9 w-auto" />
+                                    <x-application-mark class="block h-9 w-auto" />
                                 </a>
                             </div>
 
