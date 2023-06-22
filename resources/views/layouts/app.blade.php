@@ -1,3 +1,7 @@
+@props([
+    'breadcrumbs' => [],
+])
+
 <!DOCTYPE html>
 <html class="" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
@@ -21,7 +25,11 @@
         <x-banner />
 
         <div class="min-h-screen bg-gray-200">
+
             @livewire('navigation-menu')
+
+            <x-filament::topbar :breadcrumbs="$breadcrumbs" />
+
 
             <!-- Page Heading -->
             @if (isset($header))
