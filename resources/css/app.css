@@ -1,4 +1,5 @@
 @import '../../vendor/filament/forms/dist/module.esm.css';
+@import '../../resources/css/filament.css';
 
 @tailwind base;
 @tailwind components;
@@ -6,4 +7,14 @@
 
 [x-cloak] {
     display: none;
+}
+
+body{
+    font-family: 'Maven Pro', sans-serif;
+}
+
+.bg-primary-500, .text-primary-500{	
+    
+    color: #776BAB currentColor;
+    
 }

@@ -8,3 +8,8 @@ body{
     font-family: 'Maven Pro', sans-serif;
 }
 
+.bg-primary-500, .text-primary-500{	
+    
+    color: #776BAB currentColor;
+    
+}

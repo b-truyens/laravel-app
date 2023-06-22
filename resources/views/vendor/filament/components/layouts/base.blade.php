@@ -102,6 +102,9 @@
             </script>
         @endif
 
+        @vite(['resources/css/filament.css'])
+
+
         {{ \Filament\Facades\Filament::renderHook('head.end') }}
     </head>
 

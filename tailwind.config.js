@@ -1,7 +1,8 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import colors from 'tailwindcss/colors'; 
+// import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
+const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -20,18 +21,21 @@ export default {
 
     theme: {
         extend: {
-            fontFamily: {
-                sans: ['Maven Pro', ...defaultTheme.fontFamily.sans],
-                
-            },
+
             colors: { 
-                danger: colors.red,
+                danger: colors.orange,
                 primary: colors.purple,
                 success: colors.blue,
                 warning: colors.pink,
             }, 
+
+            fontFamily: {
+                sans: ['Maven Pro', ...defaultTheme.fontFamily.sans],
+                
+            },
+
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [forms, typography, colors],
 };

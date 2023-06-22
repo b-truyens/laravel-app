@@ -171,7 +171,7 @@
                             </div>
 
                             <span class="z-50">
-                            <x-filament::layouts.app.topbar.user-menu /></a>
+                                <x-filament::layouts.app.topbar.user-menu /></a>
                             </span>
 
 
@@ -274,12 +274,12 @@
                                 @endif
                             @endif
 
-                           
+
                         </div>
 
                         <span class="z-20 hidden sm:visible ">
                             <x-filament::layouts.app.topbar.user-menu />
-                            </span>
+                        </span>
 
                     </div>
                 </div>
