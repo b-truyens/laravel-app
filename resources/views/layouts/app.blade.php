@@ -20,6 +20,22 @@
 
         <!-- Styles -->
         @livewireStyles
+
+        @if (config('filament.dark_mode'))
+        <script>
+            const theme = localStorage.getItem('theme')
+
+            if (
+                theme === 'dark' ||
+                (!theme &&
+                    window.matchMedia('(prefers-color-scheme: dark)')
+                        .matches)
+            ) {
+                document.documentElement.classList.add('dark')
+            }
+        </script>
+    @endif
+
     </head>
     <body class="font-sans antialiased bg-slate-200 ">
         <x-banner />

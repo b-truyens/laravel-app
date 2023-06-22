@@ -47,7 +47,9 @@
 
             @livewire('filament.core.notifications')
 
-            {{-- <x-filament::layouts.app.topbar.user-menu /> --}}
+            <span class="z-20 visible sm:hidden">
+                <x-filament::layouts.app.topbar.user-menu />
+            </span>        
         </div>
     </div>
 </header>
