@@ -37,10 +37,10 @@
     @endif
 
     </head>
-    <body class="font-sans antialiased bg-slate-200 ">
+    <body class="font-sans antialiased bg-slate-200 h-full w-full ">
         <x-banner />
 
-        <div class="min-h-screen dark:bg-gray-700 bg-gray-200">
+        <div class="min-h-screen dark:bg-gray-700 bg-gray-200 w-full">
 
             <x-compact-nav />
 

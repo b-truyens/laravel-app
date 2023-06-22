@@ -1,0 +1,2 @@
+[200~User::factory()->count(5)->create()
+Team::factory()->count(5)->create()

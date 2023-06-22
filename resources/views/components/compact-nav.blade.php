@@ -8,7 +8,7 @@
                 class="flex w-full z-0 bg-white border-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex justify-between h-16">
+                    <div class="flex justify-between space-x-5 h-16">
                         <div class="flex">
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
