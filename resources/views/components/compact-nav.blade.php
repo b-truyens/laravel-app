@@ -53,9 +53,9 @@
                             </div>
                             <!-- Teams Dropdown -->
                             @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                                <div class="ml-3 relative dark:text-white">
+                                <div class="ml-3 relative text-gray-700 dark:text-white">
                                     <x-dropdown align="right" width="60">
-                                        <x-slot name="trigger" class="dark:bg-black active:bg-slate-600">
+                                        <x-slot name="trigger" class="dark:bg-black bg-white active:bg-slate-600">
                                             <span class="inline-flex rounded-md dark:bg-black">
                                                 <button type="button"
                                                     class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-black dark:bg-black hover:bg-black hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150 dark:text-white">
@@ -74,20 +74,20 @@
                                         <x-slot name="content" style="none; " class="bg-transparent">
                                             <div class="w-60">
                                                 <!-- Team Management -->
-                                                <div class="block px-4 py-2 text-xs text-gray-400 dark:text-black">
+                                                <div class="block px-4 py-2 text-xs dark:bg-black dark:text-white text-black bg-white">
                                                     {{ __('Manage Team') }}
                                                 </div>
 
                                                 <!-- Team Settings -->
                                                 <x-dropdown-link
                                                     href="{{ route('teams.show', Auth::user()->currentTeam->id) }}"
-                                                    class="dark:bg-black dark:text-black">
+                                                    class="dark:bg-black dark:text-white text-black bg-white">
                                                     {{ __('Team Settings') }}
                                                 </x-dropdown-link>
 
                                                 @can('create', Laravel\Jetstream\Jetstream::newTeamModel())
                                                     <x-dropdown-link href="{{ route('teams.create') }}"
-                                                        class=" dark:text-black">
+                                                        class="dark:bg-black dark:text-white text-black bg-white">
                                                         {{ __('Create New Team') }}
                                                     </x-dropdown-link>
                                                 @endcan
@@ -96,7 +96,7 @@
                                                 @if (Auth::user()->allTeams()->count() > 1)
                                                     <div class="border-t border-gray-200"></div>
 
-                                                    <div class="block px-4 py-2 text-xs text-gray-400 dark:text-white">
+                                                    <div class="block px-4 py-2 text-xs dark:bg-black dark:text-white text-black bg-white">
                                                         {{ __('Switch Teams') }}
                                                     </div>
 
@@ -116,7 +116,7 @@
                                     <x-slot name="trigger">
                                         @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                                             <button
-                                                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition dark:text-white">
+                                                class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition dark:bg-black dark:text-white text-black bg-white">
                                                 <img class="h-8 w-8 rounded-full object-cover"
                                                     src="{{ Auth::user()->profile_photo_url }}"
                                                     alt="{{ Auth::user()->name }}" />
@@ -124,7 +124,7 @@
                                         @else
                                             <span class="inline-flex rounded-md" style="none;">
                                                 <button type="button"
-                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-black hover:text-gray-700 dark:hover:text-black focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150 dark:text-white">
+                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md  focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150 dark:bg-black dark:text-white text-black bg-white">
                                                     {{ Auth::user()->name }}
 
                                                     <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -140,29 +140,29 @@
 
                                     <x-slot name="content">
                                         <!-- Account Management -->
-                                        <div class="block px-4 py-2 text-xs text-gray-400 dark:text-black">
+                                        <div class="block px-4 py-2 text-xs dark:bg-black dark:text-white text-black bg-white">
                                             {{ __('Manage Account') }}
                                         </div>
 
-                                        <x-dropdown-link href="{{ route('profile.show') }}" class=" dark:text-black">
+                                        <x-dropdown-link href="{{ route('profile.show') }}" class="dark:bg-black dark:text-white text-black bg-white">
                                             {{ __('Profile') }}
                                         </x-dropdown-link>
 
                                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                             <x-dropdown-link href="{{ route('api-tokens.index') }}"
-                                                class=" dark:text-black">
+                                                class="dark:bg-black dark:text-white text-black bg-white">
                                                 {{ __('API Tokens') }}
                                             </x-dropdown-link>
                                         @endif
 
-                                        <div class="border-t border-gray-200"></div>
+                                        <div class="border-t border-gray-200 dark:border-black"></div>
 
                                         <!-- Authentication -->
                                         <form method="POST" action="{{ route('logout') }}" x-data>
                                             @csrf
 
                                             <x-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();"
-                                                class=" dark:text-black">
+                                                class="dark:bg-black dark:text-white text-black bg-white">
                                                 {{ __('Log Out') }}
                                             </x-dropdown-link>
                                         </form>

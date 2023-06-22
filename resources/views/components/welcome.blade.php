@@ -1,15 +1,12 @@
-<div class="p-6 lg:p-8 bg-gray-600 border-b border-gray-200">
-    <x-application-logo class="block h-12 w-auto" />
+<div class="p-6 lg:p-8 bg-gradient-to-r from-primary-400 to-success-300 dark:to-gray-600 border-b border-gray-200">
+    <x-application-logo class="block h-12 w-auto " />
 
-    <h1 class="mt-8 text-2xl font-medium text-gray-100">
-        Welcome to your Jetstream application!
+    <h1 class="mt-8 text-2xl font-medium text-gray-900 dark:text-gray-100">
+        Welcome to the application!
     </h1>
 
-    <p class="mt-6 text-gray-100 leading-relaxed">
-        Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed
-        to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe
-        you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel
-        ecosystem to be a breath of fresh air. We hope you love it.
+    <p class="mt-6 text-gray-800 dark:text-gray-200 leading-relaxed">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptatum quos distinctio quibusdam eum suscipit officia, repudiandae, quia corporis quod nisi quo reprehenderit. Eligendi consequatur dolorem porro cum optio suscipit.
     </p>
 </div>
 

@@ -49,7 +49,7 @@
 
             <!-- Page Heading -->
             @if (isset($header))
-                <header class="bg-gray-300  shadow">
+                <header class="dark:bg-slate-500  shadow">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
@@ -57,10 +57,19 @@
             @endif
 
             <!-- Page Content -->
-            <main  class="bg-gray-200 shadow antialiased">
+            <main  class="bg-gradient-to-b from-slate-200 to-gray-300 dark:from-slate-500 dark:to-gray-700 shadow antialiased">
                 {{ $slot }}
+                <div class="max-w-7xl mx-auto p-6 lg:p-8">
+
+                    <x-footer />
+                
+                </div>
             </main>
+
+
+            
         </div>
+
         @livewire('notifications')
 
         @stack('modals')
