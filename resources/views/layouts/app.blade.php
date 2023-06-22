@@ -42,9 +42,9 @@
 
         <div class="min-h-screen bg-gray-200">
 
-            @livewire('navigation-menu')
+            <x-compact-nav />
 
-            <x-filament::topbar :breadcrumbs="$breadcrumbs" />
+            <x-filament::topbar />
 
 
             <!-- Page Heading -->

@@ -5,7 +5,7 @@
 
 
             <nav x-data="{ open: false }"
-                class="bg-white border-b border-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white drop-shadow-md">
+                class="z-20 bg-white border-b border-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:text-white drop-shadow-md">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
@@ -37,7 +37,7 @@
                             </div>
                         </div>
 
-                        <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <div class="z-20 hidden sm:flex sm:items-center sm:ml-6">
                             <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
                                 @auth
                                 @else
@@ -58,7 +58,7 @@
                                         <x-slot name="trigger" class="dark:bg-black active:bg-slate-600">
                                             <span class="inline-flex rounded-md dark:bg-black">
                                                 <button type="button"
-                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-black dark:bg-black hover:bg-black hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150 dark:text-white">
+                                                    class="inline-flex items-center px-3 py-2 border border-transparent z-20 text-sm leading-4 font-medium rounded-md text-gray-500 bg-black dark:bg-black hover:bg-black hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150 dark:text-white">
                                                     {{ Auth::user()->currentTeam->name }}
 
                                                     <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +170,7 @@
                                 </x-dropdown>
                             </div>
 
-                            <span class="z-20">
+                            <span class="z-50">
                             <x-filament::layouts.app.topbar.user-menu /></a>
                             </span>
 

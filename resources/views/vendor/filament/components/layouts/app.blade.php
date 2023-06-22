@@ -31,7 +31,8 @@
             ])
         >
 
-        <x-compact-nav />
+        <x-dynamic-nav />
+
         <x-filament::topbar-full :breadcrumbs="$breadcrumbs" />
 
             <div

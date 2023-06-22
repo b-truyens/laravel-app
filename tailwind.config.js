@@ -15,12 +15,14 @@ export default {
     ],
 
     darkMode: 'class',
+    
 
 
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Maven Pro', ...defaultTheme.fontFamily.sans],
+                
             },
             colors: { 
                 danger: colors.red,
