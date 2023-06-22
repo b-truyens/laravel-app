@@ -23,14 +23,13 @@ export default {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             colors: { 
-                danger: colors.rose,
-                primary: colors.blue,
-                success: colors.green,
-                warning: colors.yellow,
+                danger: colors.red,
+                primary: colors.purple,
+                success: colors.blue,
+                warning: colors.pink,
             }, 
         },
     },
 
     plugins: [forms, typography],
 };
-

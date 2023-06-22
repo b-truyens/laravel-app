@@ -31,9 +31,8 @@
             ])
         >
 
-        @livewire('navigation-menu')
-
-        <x-filament::topbar :breadcrumbs="$breadcrumbs" />
+        <x-compact-nav />
+        <x-filament::topbar-full :breadcrumbs="$breadcrumbs" />
 
             <div
                 @class([
