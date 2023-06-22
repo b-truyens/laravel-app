@@ -53,12 +53,12 @@
                             </div>
                             <!-- Teams Dropdown -->
                             @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
-                                <div class="ml-3 relative text-gray-700 dark:text-white">
+                                <div class="ml-3 relative text-gray-700 dark:text-white dark:bg-black bg-white">
                                     <x-dropdown align="right" width="60">
-                                        <x-slot name="trigger" class="dark:bg-black bg-white active:bg-slate-600">
-                                            <span class="inline-flex rounded-md dark:bg-black">
+                                        <x-slot name="trigger" class="dark:bg-black bg-white">
+                                            <span class="inline-flex rounded-full dark:bg-black bg-white">
                                                 <button type="button"
-                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-black dark:bg-black hover:bg-black hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150 dark:text-white">
+                                                    class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-full text-gray-500 bg-white dark:bg-black hover:bg-gray hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150 dark:text-white">
                                                     {{ Auth::user()->currentTeam->name }}
 
                                                     <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@
 
                                                 <!-- Team Switcher -->
                                                 @if (Auth::user()->allTeams()->count() > 1)
-                                                    <div class="border-t border-gray-200"></div>
+                                                    <div class="border-t border-gray-200 dark:border-black"></div>
 
                                                     <div class="block px-4 py-2 text-xs dark:bg-black dark:text-white text-black bg-white">
                                                         {{ __('Switch Teams') }}

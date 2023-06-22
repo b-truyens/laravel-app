@@ -5,8 +5,8 @@
 <header
     {{
         $attributes->class([
-            'filament-main-topbar sticky top-0 z-0 flex h-16 w-full shrink-0 items-center border-b bg-white',
-            'dark:border-gray-700 dark:bg-gray-800' => config('filament.dark_mode'),
+            'filament-main-topbar border-0 sticky top-0 z-0 flex h-16 w-full shrink-0 items-center bg-gradient-to-l from-primary-400 to-success-300',
+            'dark:to-indigo-800' => config('filament.dark_mode'),
         ])
     }}
 >
