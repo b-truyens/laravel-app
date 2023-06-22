@@ -10,7 +10,7 @@
             x-show="$store.sidebar.isOpen"
             x-transition.opacity.500ms
             x-on:click="$store.sidebar.close()"
-            class="filament-sidebar-close-overlay fixed inset-0 z-20 h-full w-full bg-gray-900/50 lg:hidden"
+            class="filament-sidebar-close-overlay fixed inset-0  h-full w-full bg-gray-900/50 lg:hidden"
         ></div>
 
         <x-filament::layouts.app.sidebar />
